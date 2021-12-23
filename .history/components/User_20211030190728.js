@@ -1,0 +1,63 @@
+import { Album } from "./Album";
+
+export class User {
+  constructor(user, api) {
+    this._user = user;
+    this._name = user.name;
+    this._userId = user.id;
+    this._api = api;
+  }
+
+  _getTemplate() {
+    const userElement = document
+      .querySelector('.user__template').content
+      .querySelector('.user')
+      .cloneNode(true);
+
+    return userElement;
+  };
+
+  _addAlbum(data) {
+    const album = new Album(data, this._api);
+    const albumElement = album.generateAlbum();
+    return albumElement;
+  };
+
+  _handleOpen() {
+    this._albumsContainer = document.createElement('ul');
+    this._albumsContainer.classList.add('albums__list');
+    this._api.getAlbums(this._userId)
+    .then((data) => {
+      data.map((item) => {
+        this._albumsContainer.append(this._addAlbum(item));
+      })
+      this._element.append(this._albumsContainer);
+    })
+    .catch((err) => {console.log(err)});
+  };
+
+  _handleClose() {
+    this._albumsContainer.remove();
+  }
+
+  _setEventListeners() {
+    const plusBtn = this._element.querySelector('.user__plus');
+    plusBtn.addEventListener('click', () => {
+      if (plusBtn.classList.contains('user__plus_opened')) {
+        this._handleClose();
+        plusBtn.classList.remove('user__plus_opened');
+      } else {
+        this._handleOpen();
+        plusBtn.classList.add('user__plus_opened');
+      }
+    });
+  };
+
+  generateUser() {
+    this._element = this._getTemplate();
+    this._setEventListeners();
+    this._element.querySelector('.user__name').textContent = this._name;
+    return this._element;
+  };
+
+}

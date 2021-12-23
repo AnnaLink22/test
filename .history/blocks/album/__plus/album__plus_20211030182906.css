@@ -1,0 +1,17 @@
+.user__plus {
+  background-image: url('../../../images/plus.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  background-color: #117DC1;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 50%;
+  margin-right: 24px;
+}
+
+.user__plus_opened {
+  background-image: url('../../../images/minus.svg');
+}

@@ -1,0 +1,58 @@
+import { Api } from '../components/Api.js';
+import { Section } from '../components/Section.js';
+import { User } from '../components/User.js';
+
+const api = new Api({
+  url:'https://json.medrating.org/',
+  headers: {
+    'Content-Type': 'application/json'
+  }
+})
+
+let chosenPics = [];
+
+api
+  .getUsers()
+  .then((data) => {
+    usersSection.renderElements(data);
+  })
+  .catch((err) => {console.log(err)}
+);
+
+
+const handleSaveDeletePic = (pic) => {
+  if (localStorage.getItem('chosen')) {
+    chosenPics = JSON.parse(localStorage.getItem('chosen'));
+    chosenPics.map((el) => {
+      if (el === pic) {
+        console.log(el);
+        const index = chosenPics.indexOf(el);
+        chosenPics.splice(index - 1, 1);
+      } else {
+        chosenPics.push(pic);
+      }
+    })
+  } else {
+    localStorage.setItem('chosen', JSON.stringify([...pic]));
+  }
+}
+
+
+
+const usersSection = new Section( (user) => {
+  usersSection.addEl(createUser(user));
+  }
+  , '.users__list'
+);
+
+const chosenSection = new Section( (pic) => {
+  chosenSection.addEl(addPic(pic));
+  }
+  , '.chosen__list'
+);
+
+const createUser = (data) => {
+  const user = new User(data, api, handleSaveDeletePic);
+  const userElement = user.generateUser();
+  return userElement;
+}

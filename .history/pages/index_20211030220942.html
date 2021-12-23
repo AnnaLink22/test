@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./index.css" >
+  <title>Albums</title>
+</head>
+
+<body>
+  <div class="page">
+    <main class="content">
+      <div class="content__column">
+        <button class="content__switch content__switch_active">Каталог</button>
+        <button class="content__switch">Избранное</button>
+      </div>
+      <section class="users">
+        <ul class="users__list">
+        </ul>
+      </section>
+
+      <section class="chosen">
+        <ul class="chosen__list">
+        </ul>
+      </section>
+    </main>
+
+    <div class="popup">
+      <button type="button" class="popup__close-btn"></button>
+      <img src="#" alt="" class="popup__pic">
+    </div>
+
+  </div>
+
+  <template class="error__template">
+    <div class="error">
+      <img src="" alt="" class="error__pic">
+      <h3 class="error__title">Список избранного пуст</h3>
+      <p class="error__subtitle">Добавляйте изображения, нажимая на звездочки</p>
+    </div>
+  </template>
+
+  <template class="preloader__template">
+    <div class="preloader"></div>
+  </template>
+
+  <!-- <template class="albums-list__template">
+    <ul class="albums__list">
+    </ul>
+  </template>
+
+  <template class="pics-list__template">
+    <ul class="pics__list">
+    </ul>
+  </template> -->
+
+  <template class="user__template">
+    <li class="user">
+      <div class="user__container">
+        <button class="user__plus"></button>
+        <h4 class="user__name"></h4>
+      </div>
+    </li>
+  </template>
+
+  <template class="album__template">
+    <li class="album">
+      <div class="album__container">
+        <button class="album__plus"></button>
+        <h5 class="album__name"></h5>
+      </div>
+    </li>
+  </template>
+
+  <template class="pics__template">
+    <li class="pic">
+      <button class="pic__star"></button>
+      <img src="" alt="" class="pic__img">
+      <span class="pic__name"></span>
+    </li>
+  </template>
+
+  <script type="module" src="../scripts/index.js"></script>
+
+</body>
+
+</html>

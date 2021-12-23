@@ -1,0 +1,9 @@
+.pics__list {
+  list-style: none;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 42px;
+  padding: 0;
+  margin: 32px auto 8px;
+}

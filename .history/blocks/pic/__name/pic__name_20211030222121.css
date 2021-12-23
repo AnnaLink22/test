@@ -1,0 +1,18 @@
+.pic__name {
+  width: 150px;
+  height: 56px;
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.69);
+  border-radius: 4px;
+  position: absolute;
+  bottom: -25px;
+  left: 30px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+.pic__name:hover {
+  visibility: visible;
+  opacity: 1;
+}

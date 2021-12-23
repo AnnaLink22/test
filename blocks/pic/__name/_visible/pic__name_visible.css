@@ -1,0 +1,15 @@
+.pic__name_visible {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: -25px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.69);
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 4px 8px;
+  height: 56px;
+  font-size: 12px;
+}

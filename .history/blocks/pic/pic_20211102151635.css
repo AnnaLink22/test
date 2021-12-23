@@ -1,0 +1,5 @@
+.pic {
+  display: flex;
+  position: relative;
+  max-width: 150px;
+}

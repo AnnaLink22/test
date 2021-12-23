@@ -1,0 +1,10 @@
+.pic__name_type_chosen {
+  visibility: visible;
+  opacity: 1;
+  color: #787878;
+  font-size: 14px;
+  line-height: 1.5;
+  display: flex;
+  align-items: start;
+  height: 87px;
+}

@@ -1,0 +1,6 @@
+.album {
+  display: flex;
+  padding: 24px 0;
+  justify-content: center;
+  flex-direction: column;
+}

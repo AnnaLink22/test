@@ -1,0 +1,17 @@
+.pic__star {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  background-image: url('../../../images/star_empty.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.pic__star_active {
+  background-image: url('../../../images/star_active.png');
+}

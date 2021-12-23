@@ -1,0 +1,6 @@
+.user {
+  display: flex;
+  min-height: 80px;
+  justify-content: center;
+  flex-direction: column;
+}

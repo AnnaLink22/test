@@ -1,0 +1,16 @@
+.content__switch {
+  width: 50%;
+  min-height: 55px;
+  background-color: transparent;
+  border-radius: 16px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #117DC1;
+}
+
+.content__switch_active {
+  background-color: #EDF9FF;
+}

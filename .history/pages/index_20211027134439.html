@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>Albums</title>
+</head>
+<body>
+  <div class="page">
+    <main class="content">
+      <div class="content__column">
+        <button class="content__switch">Каталог</button>
+        <button class="content__switch">Избранное</button>
+      </div>
+      <section class="users">
+        <ul class="users__list">
+          <ul class="album__list">
+            <ul class="pics__list">
+
+            </ul>
+          </ul>
+        </ul>
+      </section>
+
+      <section class="chosen">
+        <ul class="chosen__list">
+
+        </ul>
+      </section>
+    </main>
+  </div>
+<template class="user__template">
+    <li class="user">
+      <button class="user__plus"></button>
+      <h1 class="user__name"></h1>
+    </li>
+  </template>
+
+  <template class="album__template">
+      <li class="album">
+        <button class="album__plus"></button>
+        <h2 class="album__name"></h1>
+      </li>
+  </template>
+
+  <template class="pics__template">
+    <li class="pic">
+      <button class="pic__star"></button>
+      <img src="" alt="" class="pic__img">
+    </li>
+  </template>
+
+  <template class="chosen__template">
+    <li class="chosen__pic">
+      <div class="chosen__pic-box">
+        <button class="chosen__star"></button>
+        <img src="" alt="" class="chosen__img">
+      </div>
+      <p class="chosen__name"></p>
+    </li>
+  </template>
+</body>
+</html>

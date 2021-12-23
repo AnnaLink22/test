@@ -1,0 +1,9 @@
+.tooltip__pic{
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-width: 424px; */
+  /* min-height: 200px; */
+}

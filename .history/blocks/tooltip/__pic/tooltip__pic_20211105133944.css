@@ -1,0 +1,10 @@
+.nopics__div {
+  background-image: url('../../../images/empty.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}

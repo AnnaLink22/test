@@ -1,0 +1,9 @@
+.pic__name_type_catalog {
+  position: absolute;
+  bottom: -25px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.69);
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
